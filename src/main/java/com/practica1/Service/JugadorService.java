@@ -88,7 +88,7 @@ public class JugadorService {
         System.out.println(jugadorRepository.findByasistenciasTotalesBetween(60, 150));
         System.out.println(jugadorRepository.findByposicionCampoIs("pivot"));
         System.out.println(jugadorRepository.findByfechaNacimientoBefore(cal.getTime()));
-        /*System.out.println(jugadorRepository.findBycanastasTotalesGreaterThanEqualAndFechaNaciemientoBefore(87,cal.getTime()));*/
+        System.out.println(jugadorRepository.findBycanastasTotalesGreaterThanEqualAndFechaNacimientoBefore(87,cal.getTime()));
 
     }
 }

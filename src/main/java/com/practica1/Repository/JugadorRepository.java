@@ -17,6 +17,6 @@ public interface JugadorRepository extends PagingAndSortingRepository<Jugador,Lo
     public List<Jugador> findByasistenciasTotalesBetween(Integer minAsistencias, Integer maxAsistencias);
     public List<Jugador> findByposicionCampoIs(String posicionCampo);
     public List<Jugador> findByfechaNacimientoBefore(Date fechaNacimiento);
-    /*public List<Jugador> findBycanastasTotalesGreaterThanEqualAndFechaNaciemientoBefore(Integer canastasTotales, Date fechaNacimiento);*/
+    public List<Jugador> findBycanastasTotalesGreaterThanEqualAndFechaNacimientoBefore(Integer canastasTotales, Date fechaNacimiento);
 
 }
