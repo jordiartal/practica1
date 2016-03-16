@@ -6,10 +6,12 @@ import com.ligaBaloncesto.Repository.EquipoRepository;
 import com.ligaBaloncesto.Repository.JugadorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Calendar;
 
 @Service
+@Transactional
 public class EquipoService {
     @Autowired
     private EquipoRepository equipoRepository;
@@ -121,5 +123,5 @@ public class EquipoService {
         System.out.println("");
     }
 
-    //CONSULTES
+
 }

@@ -1,6 +1,7 @@
 package com.ligaBaloncesto.Model;
 
 import javax.persistence.*;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -10,19 +11,12 @@ public class Temporada {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     String nombre;
+    @Column
+    private Date fecha;
     @ManyToOne
     private Liga liga;
     @ManyToMany
     private Set<Equipo> equipos = new HashSet<>();
-
-    public Temporada() {
-    }
-
-    public Temporada(String nombre, Liga liga, Set<Equipo> equipos) {
-        this.nombre = nombre;
-        this.liga = liga;
-        this.equipos = equipos;
-    }
 
     public Long getId() {
         return id;
@@ -40,6 +34,14 @@ public class Temporada {
         this.nombre = nombre;
     }
 
+    public Date getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(Date fecha) {
+        this.fecha = fecha;
+    }
+
     public Liga getLiga() {
         return liga;
     }
@@ -54,6 +56,18 @@ public class Temporada {
 
     public void setEquipos(Set<Equipo> equipos) {
         this.equipos = equipos;
+    }
+
+    public Temporada(String nombre, Date fecha, Liga liga, Set<Equipo> equipos) {
+
+        this.nombre = nombre;
+        this.fecha = fecha;
+        this.liga = liga;
+        this.equipos = equipos;
+    }
+
+    public Temporada() {
+
     }
 }
 
