@@ -3,9 +3,7 @@ package com.ligaBaloncesto.Model;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
-import java.util.Date;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 @Entity
 public class Equipo {
@@ -84,4 +82,6 @@ public class Equipo {
     public Equipo() {
 
     }
+
+
 }

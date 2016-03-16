@@ -36,17 +36,7 @@ public class TemporadaService {
         temporada2.setFecha(cal.getTime());
         temporadaRepository.save(temporada2);
 
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("------------------>>>>>>>>>>>>>>>>>>TEMPORADES CREADES<<<<<<<<<<<<<------------------");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
+
 
         //ASSIGNACIO TEMPORADES-EQUIPS
         temporada1.getEquipos().add(equipoRepository.findByNombre("equipo1"));
@@ -58,17 +48,7 @@ public class TemporadaService {
         temporada2.getEquipos().add(equipoRepository.findByNombre("equipo5"));
         temporadaRepository.save(temporada2);
 
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("------------------>>>>>>>>>>>>>>>>>>TEMPORADES ASSIGNADES ALS EQUIPS<<<<<<<<<<<<<------------------");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
+
 
     }
 }

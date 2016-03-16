@@ -46,4 +46,13 @@ public class Liga {
     public void setTemporadas(Set<Temporada> temporadas) {
         this.temporadas = temporadas;
     }
+
+    @Override
+    public String toString() {
+        return "Liga{" +
+                "id=" + id +
+                ", nombre='" + nombre + '\'' +
+                ", temporadas=" + temporadas +
+                '}';
+    }
 }

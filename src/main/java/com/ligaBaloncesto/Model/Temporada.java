@@ -69,5 +69,16 @@ public class Temporada {
     public Temporada() {
 
     }
+
+    @Override
+    public String toString() {
+        return "Temporada{" +
+                "id=" + id +
+                ", nombre='" + nombre + '\'' +
+                ", fecha=" + fecha +
+                ", liga=" + liga +
+                ", equipos=" + equipos +
+                '}';
+    }
 }
 

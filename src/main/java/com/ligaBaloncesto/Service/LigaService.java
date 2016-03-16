@@ -24,19 +24,6 @@ public class LigaService {
         liga1.setNombre("Liga Basquet");
         ligaRepository.save(liga1);
 
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("------------------>>>>>>>>>>>>>>>>>>LLIGA CREADA<<<<<<<<<<<<<------------------");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
-
-
         Temporada temporada1 = temporadaRepository.findByNombre("2015");
         Temporada temporada2 = temporadaRepository.findByNombre("2016");
 
@@ -45,18 +32,6 @@ public class LigaService {
 
         temporadaRepository.save(temporada1);
         temporadaRepository.save(temporada2);
-
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("------------------>>>>>>>>>>>>>>>>>>TEMPORADES ASSIGNADES A LA LLIGA<<<<<<<<<<<<<------------------");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
 
     }
 }

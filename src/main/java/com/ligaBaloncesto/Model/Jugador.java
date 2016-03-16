@@ -1,11 +1,13 @@
 package com.ligaBaloncesto.Model;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.stream.Stream;
 
 
 @Entity
-public class Jugador {
+public class Jugador extends ArrayList {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -101,4 +103,21 @@ public class Jugador {
     public void setEquipo(Equipo equipo) {
         this.equipo = equipo;
     }
+
+    @Override
+    public String toString() {
+        return "Jugador{" +
+                "id=" + id +
+                ", nombre='" + nombre + '\'' +
+                ", fechaNacimiento=" + fechaNacimiento +
+                ", canastasTotales=" + canastasTotales +
+                ", asistenciasTotales=" + asistenciasTotales +
+                ", rebotesTotales=" + rebotesTotales +
+                ", posicionCampo='" + posicionCampo + '\'' +
+                ", equipo=" + equipo +
+                '}';
+    }
+
+
+
 }
