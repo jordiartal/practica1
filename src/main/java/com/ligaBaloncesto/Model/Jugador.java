@@ -1,11 +1,8 @@
-package com.practica1.Model;
+package com.ligaBaloncesto.Model;
 
 import javax.persistence.*;
 import java.util.Date;
 
-/**
- * Created by jordi.artal on 25/11/2015.
- */
 
 @Entity
 public class Jugador {
@@ -25,12 +22,25 @@ public class Jugador {
     private Integer rebotesTotales;
     @Column
     private String posicionCampo;
+    @ManyToOne
+    private Equipo equipo;
 
+    public Jugador() {
+    }
+
+    public Jugador(String nombre, Date fechaNacimiento, Integer canastasTotales, Integer asistenciasTotales, Integer rebotesTotales, String posicionCampo, Equipo equipo) {
+        this.nombre = nombre;
+        this.fechaNacimiento = fechaNacimiento;
+        this.canastasTotales = canastasTotales;
+        this.asistenciasTotales = asistenciasTotales;
+        this.rebotesTotales = rebotesTotales;
+        this.posicionCampo = posicionCampo;
+        this.equipo = equipo;
+    }
 
     public Long getId() {
         return id;
     }
-
 
     public void setId(Long id) {
         this.id = id;
@@ -84,16 +94,11 @@ public class Jugador {
         this.posicionCampo = posicionCampo;
     }
 
-    @Override
-    public String toString() {
-        return "Jugador{" +
-                "id=" + id +
-                ", nombre='" + nombre + '\'' +
-                ", fechaNacimiento=" + fechaNacimiento +
-                ", canastasTotales=" + canastasTotales +
-                ", asistenciasTotales=" + asistenciasTotales +
-                ", rebotesTotales=" + rebotesTotales +
-                ", posicionCampo='" + posicionCampo + '\'' +
-                '}';
+    public Equipo getEquipo() {
+        return equipo;
+    }
+
+    public void setEquipo(Equipo equipo) {
+        this.equipo = equipo;
     }
 }

@@ -1,4 +1,4 @@
-package com.practica1;
+package com.ligaBaloncesto;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
