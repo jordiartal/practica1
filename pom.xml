@@ -8,7 +8,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>practica1</name>
+	<name>ligaBaloncestoSpring</name>
 	<description>Liga Baloncesto Spring</description>
 
 	<parent>
