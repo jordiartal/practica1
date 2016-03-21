@@ -27,6 +27,8 @@ public interface JugadorRepository extends PagingAndSortingRepository<Jugador,Lo
     default Jugador save() {
         return null;
     }
+
+
     /*@Query("SELECT j FROM Jugador j where j.equipo.name = :equipoName order by j.canastasTotal desc ")
     List<Jugador> findJugadorOrderByCanastasFromEquipo(@Param("equipoName") String equipoName);*/
 }

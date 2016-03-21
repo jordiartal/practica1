@@ -19,14 +19,14 @@ public class EquipoController {
     private EquipoRepository equipoRepository;
 
     //PER A CREAR EL RECURS --->>>>>POST<<<<<-----
-    @RequestMapping(method = RequestMethod.POST)
+    @RequestMapping(value="/save", method = RequestMethod.POST)
     @ResponseStatus(HttpStatus.CREATED)
     public Equipo save(@RequestBody Equipo equipo){
         return equipoRepository.save(equipo);
     }
 
     //PER A LLEGIR EL RECURS --->>>>>GET<<<<<-----
-    @RequestMapping(method = RequestMethod.GET)
+    @RequestMapping(value="/findAll",method = RequestMethod.GET)
     public List<Equipo> findAll(){
         List<Equipo> equipos = new ArrayList<>();
         Iterator<Equipo> it = equipoRepository.findAll().iterator();
@@ -37,7 +37,7 @@ public class EquipoController {
     }
 
     //PER A EDITAR COMPLETAMENT EL RECURS --->>>>>PUT<<<<<-----
-    @RequestMapping(value = "/{id}", method = RequestMethod.PUT)
+    @RequestMapping(value = "/update/{id}", method = RequestMethod.PUT)
     public Equipo updateById(@PathVariable Long id, @RequestBody Equipo equipo) throws EquipoException {
         Equipo equipo1 = equipoRepository.findOne(id);
         if(equipo1 == null){
@@ -47,7 +47,7 @@ public class EquipoController {
     }
 
     //PER A ESBORRAR EL RECURS --->>>>>DELETE<<<<<-----
-    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
+    @RequestMapping(value = "/delete/{id}", method = RequestMethod.DELETE)
     public void deleteById(@PathVariable Long id) throws EquipoException {
         Equipo equipo = equipoRepository.findOne(id);
         if(equipo == null){

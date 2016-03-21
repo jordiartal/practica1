@@ -8,6 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.*;
+
 @RestController
 @RequestMapping("/jugadores")
 public class JugadorController {
@@ -15,13 +16,13 @@ public class JugadorController {
     JugadorRepository jugadorRepository;
 
     //PER A CREAR EL RECURS --->>>>>POST<<<<<-----
-    @RequestMapping(method = RequestMethod.POST)
+    @RequestMapping(value="post", method = RequestMethod.POST)
     public Jugador save(@RequestBody Jugador jugador){
-        return jugadorRepository.save() ;
+        return jugadorRepository.save(jugador) ;
     }
 
     //PER A LLEGIR EL RECURS SENCER --->>>>>GET<<<<<-----
-    @RequestMapping(method = RequestMethod.GET)
+    @RequestMapping(value="/findAll",method = RequestMethod.GET)
     public List<Jugador> findAll(){
         List<Jugador> jugadores = new ArrayList<Jugador>();
         Iterator<Jugador> iterator = jugadorRepository.findAll().iterator();
@@ -35,26 +36,26 @@ public class JugadorController {
     @RequestMapping (value = "/{id}",method = RequestMethod.GET)
     public Jugador getOne(@PathVariable Long id) throws JugadorException {
         Jugador jugador1 = jugadorRepository.findOne(id);
-        if(jugador1.isEmpty()){
+        if(jugador1 == null){
             throw new JugadorException(id);
         }
         return jugador1;
     }
 
     //PER A EDITAR COMPLETAMENT EL RECURS --->>>>>PUT<<<<<-----
-    @RequestMapping(value = "/{id}", method = RequestMethod.PUT)
-    public Jugador updateById(@PathVariable Long id,@RequestBody Jugador jugador3) throws JugadorException {
+    @RequestMapping(value = "put/{id}", method = RequestMethod.PUT)
+    public Jugador updateById(@PathVariable Long id,@RequestBody Jugador jugador) throws JugadorException {
         if (jugadorRepository.findOne(id) == null){
             throw new JugadorException(id);
         }
-        return jugadorRepository.save();
+        return jugadorRepository.save(jugador);
     }
 
     //PER A ESBORRAR EL RECURS --->>>>>DELETE<<<<<-----
     @RequestMapping(value="/{id}")
     public void deleteById(@PathVariable Long id) throws JugadorException {
         Jugador jugador = jugadorRepository.findOne(id);
-        if(jugador.isEmpty()){
+        if(jugador == null){
             throw new JugadorException(id);
         }
         jugadorRepository.delete(id);

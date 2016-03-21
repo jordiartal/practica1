@@ -7,7 +7,7 @@ import java.util.stream.Stream;
 
 
 @Entity
-public class Jugador extends ArrayList {
+public class Jugador {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -117,7 +117,4 @@ public class Jugador extends ArrayList {
                 ", equipo=" + equipo +
                 '}';
     }
-
-
-
 }

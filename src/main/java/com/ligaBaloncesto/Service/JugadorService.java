@@ -29,6 +29,7 @@ public class JugadorService {
         jugador1.setPosicionCampo("base");
         cal.set(1990, Calendar.FEBRUARY, 2);
         jugador1.setFechaNacimiento(cal.getTime());
+        jugadorRepository.save(jugador1);
 
 
         Jugador jugador2 = new Jugador();
@@ -39,6 +40,7 @@ public class JugadorService {
         jugador2.setPosicionCampo("base");
         cal.set(1990, Calendar.FEBRUARY, 2);
         jugador2.setFechaNacimiento(cal.getTime());
+        jugadorRepository.save(jugador2);
 
 
         Jugador jugador3 = new Jugador();
@@ -49,6 +51,7 @@ public class JugadorService {
         jugador3.setPosicionCampo("pivot");
         cal.set(1990, Calendar.FEBRUARY, 2);
         jugador3.setFechaNacimiento(cal.getTime());
+        jugadorRepository.save(jugador3);
 
 
         Jugador jugador4 = new Jugador();
@@ -59,7 +62,7 @@ public class JugadorService {
         jugador4.setPosicionCampo("pivot");
         cal.set(1990, Calendar.FEBRUARY, 2);
         jugador4.setFechaNacimiento(cal.getTime());
-
+        jugadorRepository.save(jugador4);
 
         Jugador jugador5 = new Jugador();
         jugador5.setNombre("jugador5");
@@ -69,7 +72,7 @@ public class JugadorService {
         jugador5.setPosicionCampo("base");
         cal.set(1990, Calendar.FEBRUARY, 2);
         jugador5.setFechaNacimiento(cal.getTime());
-
+        jugadorRepository.save(jugador5);
 
         Jugador jugador6 = new Jugador();
         jugador6.setNombre("jugador6");
@@ -79,7 +82,7 @@ public class JugadorService {
         jugador6.setPosicionCampo("base");
         cal.set(1990, Calendar.FEBRUARY, 2);
         jugador6.setFechaNacimiento(cal.getTime());
-
+        jugadorRepository.save(jugador6);
 
         Jugador jugador7 = new Jugador();
         jugador7.setNombre("jugador7");
@@ -89,7 +92,7 @@ public class JugadorService {
         jugador7.setPosicionCampo("base");
         cal.set(1990, Calendar.FEBRUARY, 2);
         jugador7.setFechaNacimiento(cal.getTime());
-
+        jugadorRepository.save(jugador7);
 
         Jugador jugador8 = new Jugador();
         jugador8.setNombre("jugador8");
@@ -99,7 +102,7 @@ public class JugadorService {
         jugador8.setPosicionCampo("base");
         cal.set(1990, Calendar.FEBRUARY, 2);
         jugador8.setFechaNacimiento(cal.getTime());
-
+        jugadorRepository.save(jugador8);
 
         Jugador jugador9 = new Jugador();
         jugador9.setNombre("jugador9");
@@ -109,7 +112,7 @@ public class JugadorService {
         jugador9.setPosicionCampo("base");
         cal.set(1990, Calendar.FEBRUARY, 2);
         jugador9.setFechaNacimiento(cal.getTime());
-
+        jugadorRepository.save(jugador9);
 
         Jugador jugador10 = new Jugador();
         jugador10.setNombre("jugador10");
@@ -119,7 +122,7 @@ public class JugadorService {
         jugador10.setPosicionCampo("base");
         cal.set(1990, Calendar.FEBRUARY, 2);
         jugador10.setFechaNacimiento(cal.getTime());
-
+        jugadorRepository.save(jugador10);
     }
 
     public void jugadorNom(){
