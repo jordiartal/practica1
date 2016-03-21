@@ -23,6 +23,10 @@ public interface JugadorRepository extends PagingAndSortingRepository<Jugador,Lo
     public ArrayList findByEquipoNombreAndPosicionCampoIs(String equipo,String posicion);
     public Jugador findTopByOrderByCanastasTotalesDesc();
     public ArrayList<Jugador> findFirst5ByOrderByAsistenciasTotalesDesc();
+
+    default Jugador save() {
+        return null;
+    }
     /*@Query("SELECT j FROM Jugador j where j.equipo.name = :equipoName order by j.canastasTotal desc ")
     List<Jugador> findJugadorOrderByCanastasFromEquipo(@Param("equipoName") String equipoName);*/
 }
